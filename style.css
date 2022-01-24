@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Code Pro", monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #d4caca;
+}
+
+.container {
+  background:#4f4f4f;
+  border: 1px solid;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 4px 7.5px;
+  margin: 4px 2.5px;
+  border-radius: 5px;
+  background-image: linear-gradient(180deg, #282828, #202020);
+  box-shadow: inset -4px 0 4px rgba(0,0,0,0.15),
+  inset 0 -4px 4px rgba(0,0,0,0.25),
+  0 0 0 1px rgba(0,0,0,0.75),
+  5px 10px 12.5px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 1.5px;
+  left: 2px;
+  bottom: 7px;
+  right: 6px;
+  background-image: linear-gradient(90deg, #232323, #4a4a4a);
+  border-radius: 5px;
+  box-shadow: -5px -5px 5px rgba(255,255,255,0.25),
+  5px 2.5px 5px rgba(0,0,0,0.15);
+  border-left: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+}
+
+button:active::before {
+  top: 2px;
+  left: 2.5px;
+  bottom: 7.5px;
+  right: 6.5px;
+}
+
+button i {
+  position: relative;
+  color: #fff;
+  font-style: normal;
+  font-size: .75em;
+}
+
+button:active i {
+  font-size: .7em;
+}
+
+.led__mode.one button {
+  box-shadow: 2.5px 2.5px 7.5px rgba(255,255,0,0.25),
+  5px 2.5px 5px rgba(255,255,0,0.15);
+  border-left: 1px solid #ff04;
+  border-bottom: 1px solid #ff04;
+  border-top: 1px solid #ff09;
+}
+
+.led__mode.one button:active {
+  box-shadow: none;
+}
+
+.led__mode.one button::before {
+  box-shadow: inset -4px 0 4px rgba(225,255,0,0.15),
+  inset 0 -4px 4px rgba(225,225,0,0.25),
+  0 0 0 1px rgba(255,255,0,0.75),
+  5px 10px 12.5px rgba(255,255,0,0.4);
+  overflow: hidden;
+}
+
+.led__mode.one button i {
+  color: #ffff00;
+  text-shadow: 2px 1px 10px ;
+}
+
+.led__mode.two button {
+  box-shadow: 2.5px 2.5px 14.5px rgba(0,255,0,0.25),
+  5px 2.5px 5px rgba(0,255,0,0.15);
+  border-left: 1px solid #0f04;
+  border-bottom: 1px solid #0f04;
+  border-top: 1px solid #0f09;
+}
+
+.led__mode.two button:active {
+  box-shadow: none;
+}
+
+.led__mode.two button::before {
+  box-shadow: inset -4px 0 4px rgba(0,255,0,0.15),
+  inset 0 -4px 4px rgba(0,225,0,0.25),
+  0 0 0 1px rgba(0,255,0,0.75),
+  5px 10px 12.5px rgba(0,255,0,0.4);
+  overflow: hidden;
+}
+
+.led__mode.two button i {
+  color: #00ff00;
+  text-shadow: 2px 1px 10px ;
+}
+
+.led__mode.three button {
+  box-shadow: 2.5px 2.5px 7.5px rgba(255,0,255,0.25),
+  5px 2.5px 5px rgba(255,0,255,0.15);
+  border-left: 1px solid rgba(225,0,225,0.26);
+  border-bottom: 1px solid rgba(225,0,225,0.26);
+  border-top: 1px solid rgba(225,0,225,0.6);
+}
+
+.led__mode.three button:active {
+  box-shadow: none;
+}
+
+.led__mode.three button::before {
+  box-shadow: inset -4px 0 4px rgba(225,0,255,0.15),
+  inset 0 -4px 4px rgba(225,0,225,0.25),
+  0 0 0 1px rgba(255,0,255,0.75),
+  5px 10px 12.5px rgba(255,0,255,0.4);
+  overflow: hidden;
+}
+
+.led__mode.three button i {
+  color: #ff00ff;
+  text-shadow: 2px 1px 10px ;
+}
+
+.led__mode.four button {
+  box-shadow: 2.5px 2.5px 7.5px rgba(0,0,255,0.25),
+  5px 2.5px 5px rgba(0,0,255,0.15);
+  border-left: 1px solid rgba(0,0,255,0.26);
+  border-bottom: 1px solid rgba(0,0,255,0.26);
+  border-top: 1px solid rgba(0,0,255,0.6);
+}
+
+.led__mode.four button:active {
+  box-shadow: none;
+}
+
+.led__mode.four button::before {
+  box-shadow: inset -4px 0 4px rgba(0,0,255,0.15),
+  inset 0 -4px 4px rgba(0,0,225,0.25),
+  0 0 0 1px rgba(0,0,255,0.75),
+  5px 10px 12.5px rgba(0,0,255,0.4);
+  overflow: hidden;
+}
+
+.led__mode.four button i {
+  color: #0000ff;
+  text-shadow: 2px 1px 10px ;
+}
+
+.led__mode.five button {
+  box-shadow: 2.5px 2.5px 7.5px rgba(255,0,0,0.25),
+  5px 2.5px 5px rgba(255,0,0,0.15);
+  border-left: 1px solid #f004;
+  border-bottom: 1px solid #f004;
+  border-top: 1px solid #f009;
+}
+
+.led__mode.five button:active {
+  box-shadow: none;
+}
+
+.led__mode.five button::before {
+  box-shadow: inset -4px 0 4px rgba(225,0,0,0.15),
+  inset 0 -4px 4px rgba(225,0,0,0.25),
+  0 0 0 1px rgba(255,0,0,0.75),
+  5px 10px 12.5px rgba(255,0,0,0.4);
+  overflow: hidden;
+}
+
+.led__mode.five button i {
+  color: #ff0000;
+  text-shadow: 2px 1px 10px ;
+}
+
+.back {
+  width: 80px;
+}
+
+.tab {
+  width: 60px;
+}
+
+.caps {
+  width: 50px;
+}
+
+.enter {
+  width: 70px;
+}
+
+.shift {
+  width: 60px;
+}
+
+.other {
+  width: 55px;
+}
+
+.extra {
+  width: 60px;
+}
+
+.space {
+  width: 303px;
+}
+
+.img {
+  width: 1.4em;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.row, button i {
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    filter: blur(.2px) hue-rotate(0deg);
+  }
+  30%, 70% {
+    filter: blur(.2px) hue-rotate(360deg);
+  }
+  100% {
+    filter: blur(.2px) hue-rotate(0deg);
+  }
+}
